@@ -16,5 +16,10 @@ For each sub-image we show the complete region and a sub-area to facilitate the 
 ![alt text](/images/map_zone3.jpg "Ille-et-Vilain Map Classification")
 
 ## Deep Neural Network architecture
-Overview of the overall framework to train a Transformer encoder with domain-adversarial training. The multi-spectral temporal sequence Xt×b is first linearly projected and fused with a position encoding. Subsequently, the self-attention-based model manipulates the input series and, through a max operation applied to the last layer of the encoder, is possible to extract a token xLdmodel from the output sequence. Finally, gradients derived by LC&CC and Domain classifiers train the network while keeping close the distribution of source and target domains. 
-<img src="/images/dann_transformer.png" width="45%" height="45%">
+Overview of the overall framework to train a Transformer encoder with domain-adversarial training. The multi-spectral temporal sequence X_{t×b} is first linearly projected and fused with a position encoding. Subsequently, the self-attention-based model manipulates the input series and, through a max operation applied to the last layer of the encoder, is possible to extract a token from the output sequence. Finally, gradients derived by LC&CC and Domain classifiers train the network while keeping close the distribution of source and target domains. 
+<img src="/images/dann_transformer.png" width="65%" height="65%">
+
+**Tested software versions**
+- TensorFlow 2.6.x
+- Keras 2.6.x
+- PyTorch 1.8.1+cu102
