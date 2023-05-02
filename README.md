@@ -1,7 +1,5 @@
 # Self-Attention DANN for Multi-Temporal Land Cover Classification
 This repository contains the official code release for the paper: "Domain-Adversarial Training of Self-Attention Based Networks for Land Cover Classification using Multi-Temporal Sentinel-2 Satellite Imagery" 
-Official citation: Martini, M.; Mazzia, V.; Khaliq, A.; Chiaberge, M. Domain-Adversarial Training of Self-Attention-Based Networks for Land Cover Classification Using Multi-Temporal Sentinel-2 Satellite Imagery. Remote Sens. 2021, 13, 2564. https://doi.org/10.3390/rs13132564
-paper url: https://www.mdpi.com/2072-4292/13/13/2564
 
 ## Description of the project
 In this study, we investigate adversarial training of deep neural networks to bridge the domain discrepancy between distinct geographical zones. In particular, we perform a thorough analysis of domain adaptation applied to challenging multi-spectral, multi-temporal data, accurately highlighting the advantages of adapting state-of-the-art self-attention-based models for LC&CC to different target zones where labeled data are not available. Our experimentation demonstrated significant performance and generalization gain in applying domain-adversarial training to source and target regions with marked dissimilarities between the distribution of extracted features.
@@ -19,7 +17,25 @@ For each sub-image we show the complete region and a sub-area to facilitate the 
 Overview of the overall framework to train a Transformer encoder with domain-adversarial training. The multi-spectral temporal sequence X_{t×b} is first linearly projected and fused with a position encoding. Subsequently, the self-attention-based model manipulates the input series and, through a max operation applied to the last layer of the encoder, is possible to extract a token from the output sequence. Finally, gradients derived by LC&CC and Domain classifiers train the network while keeping close the distribution of source and target domains. 
 <img src="/images/dann_transformer.png" width="65%" height="65%">
 
-**Tested software versions**
-- TensorFlow 2.6.x
-- Keras 2.6.x
+## Reference
+Martini, M.; Mazzia, V.; Khaliq, A.; Chiaberge, M. Domain-Adversarial Training of Self-Attention-Based Networks for Land Cover Classification Using Multi-Temporal Sentinel-2 Satellite Imagery. Remote Sens. 2021, 13, 2564. https://doi.org/10.3390/rs13132564
+
+paper url: https://www.mdpi.com/2072-4292/13/13/2564
+
+bib ref:
+
+@article{martini2021domain,
+  title={Domain-adversarial training of self-attention-based networks for land cover classification using multi-temporal Sentinel-2 satellite imagery},
+  author={Martini, Mauro and Mazzia, Vittorio and Khaliq, Aleem and Chiaberge, Marcello},
+  journal={Remote Sensing},
+  volume={13},
+  number={13},
+  pages={2564},
+  year={2021},
+  publisher={MDPI}
+}
+
+
+## Requirements
 - PyTorch 1.8.1+cu102
+- BreizhCrop Dataset: https://github.com/dl4sits/BreizhCrops (py package: pip install breizhcrops)
