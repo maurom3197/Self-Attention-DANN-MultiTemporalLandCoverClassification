@@ -5,9 +5,12 @@ This repository contains the official code release for the paper: "Domain-Advers
 In this study, we investigate adversarial training of deep neural networks to bridge the domain discrepancy between distinct geographical zones. In particular, we perform a thorough analysis of domain adaptation applied to challenging multi-spectral, multi-temporal data, accurately highlighting the advantages of adapting state-of-the-art self-attention-based models for LC&CC to different target zones where labeled data are not available. Our experimentation demonstrated significant performance and generalization gain in applying domain-adversarial training to source and target regions with marked dissimilarities between the distribution of extracted features.
 
 The repository is organized as follows:
-- **training** contains all the code for adversarial training of vision transformers for land cover classification
-- **visualization** 2D and 3D plot visualization of extracted features
-- **testing** 
+- **DANN_Transformer_breizhcrops_demo.ipynb** contains a demo for adversarial training of vision transformers for land cover classification as done in the paper
+- **Feature_plot_breizhcrops_demo.ipynb** shows the 2D and 3D plot visualization of extracted features and prediction on the crops map
+- **test_on_map.ipynb** shows the predictions of the model on the map region
+- **utils** contains all the scripts
+- **models** contains all the saved models
+- **results** stores data obtained from testing and plot
 
 ## The Visual representation of land crops classification on zone 3 (Ille-et-Vilain) of the BreizhCrops dataset
 For each sub-image we show the complete region and a sub-area to facilitate the visualization of the advantage obtained by the proposed methodology. In particular, on the left the crops predictions without our domain adaptation mechanism are shown, while in the center the same predictions performed adopting DANN are proposed. On the right, ground truth labeled crops can be visualized. The improvement in the classification with DANN is evident, especially in the reduction of misclassification of wheat and meadows. :
@@ -38,4 +41,10 @@ bib ref:
 
 ## Requirements
 - PyTorch 1.8.1+cu102
-- BreizhCrop Dataset: https://github.com/dl4sits/BreizhCrops (py package: pip install breizhcrops)
+- BreizhCrop Dataset: https://github.com/dl4sits/BreizhCrops 
+- breizcrops package: pip install breizhcrops
+- numpy
+- matplotlib
+- sklearn
+- tqdm
+
