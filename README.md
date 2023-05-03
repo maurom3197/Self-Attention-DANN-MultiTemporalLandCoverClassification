@@ -27,16 +27,16 @@ paper url: https://www.mdpi.com/2072-4292/13/13/2564
 
 bib ref:
 
-  @article{martini2021domain,
-    title={Domain-adversarial training of self-attention-based networks for land cover classification using multi-temporal Sentinel-2 satellite imagery},
-    author={Martini, Mauro and Mazzia, Vittorio and Khaliq, Aleem and Chiaberge, Marcello},
-    journal={Remote Sensing},
-    volume={13},
-    number={13},
-    pages={2564},
-    year={2021},
-    publisher={MDPI}
-}
+    @article{martini2021domain,
+      title={Domain-adversarial training of self-attention-based networks for land cover classification using multi-temporal Sentinel-2 satellite imagery},
+      author={Martini, Mauro and Mazzia, Vittorio and Khaliq, Aleem and Chiaberge, Marcello},
+      journal={Remote Sensing},
+      volume={13},
+      number={13},
+      pages={2564},
+      year={2021},
+      publisher={MDPI}
+    }
 
 
 ## Requirements
